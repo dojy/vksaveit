@@ -16,7 +16,7 @@ do
 		newfile=$dir$author" - "$song".mp3"
 		echo "$newfile" 
 		if [ -e "$newfile" ]; then
-			echo " already here\n"
+			echo "^ already here"
 		else
 			eval "cp  "$(pwd)"/"$file" \""$newfile"\""
 		fi
