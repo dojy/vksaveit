@@ -10,10 +10,10 @@ do
 	id3v2 -l $file > ~/log
 	song=`grep 'TIT2' ~/log`
 	if [ -n "$song" ]; then
-		author=`grep 'TPE1' ~/log`
+		artist=`grep 'TPE1' ~/log`
 		song=`echo "$song"  | sed 's/^\(.*\): //'`
-		author=`echo "$author" | sed 's/^\(.*\): //'` 
-		newfile=$dir$author" - "$song".mp3"
+		artist=`echo "$artist" | sed 's/^\(.*\): //'` 
+		newfile=$dir$artist" - "$song".mp3"
 		echo "$newfile" 
 		if [ -e "$newfile" ]; then
 			echo "^ already here"
